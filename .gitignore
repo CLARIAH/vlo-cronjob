@@ -1,0 +1,5 @@
+.idea
+.venv
+flag
+logs
+**/__pycache__/

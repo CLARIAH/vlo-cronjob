@@ -1,0 +1,14 @@
+[project]
+name = "cronjob"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "charset-normalizer>=3.4.1",
+    "idna>=3.10",
+    "pyfat",
+]
+
+[tool.uv.sources]
+pyfat = { git = "https://github.com/CLARIAH/pyFAT.git", rev = "develop" }
