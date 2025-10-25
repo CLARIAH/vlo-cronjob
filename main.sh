@@ -3,6 +3,7 @@
 # local test
 # source $(pwd)/.oai.env && source $(pwd)/harvest.sh oai
 # source $(pwd)/.nde.env && source $(pwd)/harvest.sh nde
+# source $(pwd)/.sdeditor.env && source $(pwd)/harvest.sh sdeditor
 
 # Clariah portainer cron
 current_dir=$(cd $(dirname $0) && pwd)
@@ -16,6 +17,7 @@ fi
 
 source "${current_dir}"/.nde.env && source "${current_dir}"/harvest.sh nde
 source "${current_dir}"/.oai.env && source "${current_dir}"/harvest.sh oai
+#source "${current_dir}"/.sdeditor.env && source "${current_dir}"/harvest.sh sdeditor
 
 # ingest
 source "${current_dir}"/.ingest.env
