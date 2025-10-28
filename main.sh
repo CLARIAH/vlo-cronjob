@@ -17,13 +17,13 @@ fi
 
 source "${current_dir}"/.nde.env && source "${current_dir}"/harvest.sh nde
 source "${current_dir}"/.oai.env && source "${current_dir}"/harvest.sh oai
-#source "${current_dir}"/.sdeditor.env && source "${current_dir}"/harvest.sh sdeditor
+source "${current_dir}"/.sdeditor.env && source "${current_dir}"/harvest.sh sdeditor
 
 # ingest
 source "${current_dir}"/.ingest.env
 if [ "${ingest:-yes}" == "yes" ] && [ "${can_ingest:-yes}" == "yes" ]; then
   echo "### Ingesting"
-  cd "${vlo_dir:-/data/vlo/datasets-vlo}" && ./control.sh -s run-import
+  cd "${vlo_dir:-/data/products/vlo/datasets-vlo}" && ./control.sh -s run-import
 else
   info "Ingest skipped due to configuration or unclear harvest flag"
 fi
