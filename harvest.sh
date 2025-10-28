@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-current_dir=$(cd "$(dirname "$0")" && pwd)
+script_path="$0"
+if [[ "$script_path" == -* ]]; then
+  script_path="./$script_path"
+fi
+current_dir=$(cd "$(dirname "$script_path")" && pwd)
+
 # make sure require vars are set
 if [ -z ${DATA_VOLUME} ] || [ -z ${HARVESTER_CONFIG} ] || [ -z ${DOCKER_IMAGE} ]; then
   echo "missing vars";
