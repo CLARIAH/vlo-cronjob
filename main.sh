@@ -35,7 +35,7 @@ docker run -d --rm --network traefik-public --name ineo_labeling -v ${DATA_VOLUM
 
 # ineo sync
 echo "### Running INEO pipeline, generating INEO records"
-docker exec -it ineo-sync uv run main.py
+docker exec ineo-sync uv run main.py
 
 # cleanup
 if [ ! -f "${current_dir}/flag" ]; then
